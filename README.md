@@ -10,7 +10,7 @@ I audit code and break things for a living (well, for bounties). My research foc
 
 ---
 
-## 🔐 Published CVEs
+## Published CVEs
 
 | CVE | Target | Vulnerability | CWE | CVSS | Advisory |
 |-----|--------|---------------|-----|------|----------|
