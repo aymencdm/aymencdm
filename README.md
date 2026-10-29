@@ -18,12 +18,22 @@ I audit code and break things for a living (well, for bounties). My research foc
 | **CVE-2026-115925** | free5GC (v1.0.0 – v4.2.3+) | Root CA private key (`cert/root.key`) committed to the repository, allowing anyone to forge certificates trusted by the default NF PKI | CWE-321 | **8.7 High** | [GHSA-grjj-c27p-3mgc](https://github.com/free5gc/free5gc/security/advisories/GHSA-grjj-c27p-3mgc) |
 | **CVE-2026-92424** | Content Egg WordPress plugin (< 11.9.0) | Contributor+ stored XSS via the import queue. Missing preset authorization plus impersonation of the preset author lets scripts bypass kses | CWE-79 | 6.8 Medium | [WPScan](https://wpscan.com/vulnerability/917b8042-b38c-4b6a-9237-1dd08ada157d/) |
 
-## 🔬 Other Research
+## Other Research
 
+- **[open5gs-sbi-idor](https://github.com/aymencdm/open5gs-sbi-idor)**: Missing authorization in Open5GS SBI handlers (UDR, UDM, AMF, NRF). The SUPI taken from the URL path is used with no caller authorization check. Public write-up; CVE assignment in progress.
 - **Final-year thesis (PFE)**: comparative, systematic audit of 5G core SBI authorization in Open5GS and free5GC against 3GPP TS 33.501.
 - **Bug bounty**: accepted findings on Bugcrowd, HackerOne and Intigriti programs, including a P1 SQL injection and JWT/IDOR issues.
 
-## 🛠️ Skills
+## Electronics Project
+
+**[medical_autonome](https://github.com/aymencdm/medical_autonome)** is my final-year electronics project: an autonomous hospital medicine-delivery robot.
+
+- **Arduino Uno** handles line following with 5 IR sensors and PID control through an L298N motor driver.
+- **Raspberry Pi 4** (Python) runs face tracking and face recognition on pan/tilt servos, and drives a servo-actuated medicine carousel and door.
+- **Flutter desktop app** manages patients, medicines and assignments, with a live camera feed and an emergency stop, talking to the Pi over a REST API and WebSocket.
+- The robot is coordinated by a finite state machine: follow line → stop at marker → recognize patient → dispense → resume. Arduino and Pi communicate over a serial protocol.
+
+## Skills
 
 **Security**
 - Source code audit (whitebox)
@@ -35,6 +45,8 @@ I audit code and break things for a living (well, for bounties). My research foc
 - Python, C
 - Linux, Bash
 - Git
+- Raspberry Pi (Python, GPIO, camera/vision, servo control)
+- Arduino (C/C++, sensors, PID control, motor drivers, serial communication)
 
 **Tooling**
 - Burp Suite, Caido for blackbox testing
@@ -45,16 +57,17 @@ I audit code and break things for a living (well, for bounties). My research foc
 - Electronics baccalaureate
 - Master's student in telecommunications
 
-## 🧪 Methodology
+## Methodology
 
 1. **Build a lab**: spin up the target in Docker Compose so every finding has a reproducible environment.
 2. **Audit the code**: trace trust boundaries and compare how sibling components implement the same control (for example, auth middleware present in every NF except one).
 3. **Confirm black-box**: prove it with Burp/Caido/curl against the running lab.
 4. **Disclose responsibly**: private advisory first, CVE through the maintainers or a CNA, public write-up after.
 
-## 📫 Contact
+## Contact
 
 - GitHub: [@aymencdm](https://github.com/aymencdm)
 - Bug bounty handles: `aymenbenlamari` / `aymencdm`
+- email : aymenbenlamari@gmail.com
 
 <!-- Add: email, LinkedIn, and a "Currently looking for" line (PhD / telecom AppSec roles) if you want it public. -->
