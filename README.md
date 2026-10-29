@@ -20,7 +20,6 @@ I audit code and break things for a living (well, for bounties). My research foc
 
 ## Other Research
 
-- **[open5gs-sbi-idor](https://github.com/aymencdm/open5gs-sbi-idor)**: Missing authorization in Open5GS SBI handlers (UDR, UDM, AMF, NRF). The SUPI taken from the URL path is used with no caller authorization check. Public write-up; CVE assignment in progress.
 - **Final-year thesis (PFE)**: comparative, systematic audit of 5G core SBI authorization in Open5GS and free5GC against 3GPP TS 33.501.
 - **Bug bounty**: accepted findings on Bugcrowd, HackerOne and Intigriti programs, including a P1 SQL injection and JWT/IDOR issues.
 
