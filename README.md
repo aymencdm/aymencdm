@@ -12,11 +12,11 @@ I audit code and break things for a living (well, for bounties). My research foc
 
 ## Published CVEs
 
-| CVE | Target | Vulnerability | CWE | CVSS | Advisory |
-|-----|--------|---------------|-----|------|----------|
-| **CVE-2026-115926** | free5GC BSF (≤ `1754bde`, v4.2.3) | Complete absence of authentication on all `/nbsf-management/v1` endpoints. An unauthenticated attacker can create, read, modify and delete PCF bindings, redirecting SMF policy traffic to a rogue PCF | CWE-306 | **9.1 Critical** | [GHSA-5wxg-mj2c-p9p2](https://github.com/free5gc/free5gc/security/advisories/GHSA-5wxg-mj2c-p9p2) |
-| **CVE-2026-115925** | free5GC (v1.0.0 – v4.2.3+) | Root CA private key (`cert/root.key`) committed to the repository, allowing anyone to forge certificates trusted by the default NF PKI | CWE-321 | **8.7 High** | [GHSA-grjj-c27p-3mgc](https://github.com/free5gc/free5gc/security/advisories/GHSA-grjj-c27p-3mgc) |
-| **CVE-2026-92424** | Content Egg WordPress plugin (< 11.9.0) | Contributor+ stored XSS via the import queue. Missing preset authorization plus impersonation of the preset author lets scripts bypass kses | CWE-79 | 6.8 Medium | [WPScan](https://wpscan.com/vulnerability/917b8042-b38c-4b6a-9237-1dd08ada157d/) |
+| CVE | Target | Vulnerability | CWE | CVSS | Advisory | Write-up |
+|-----|--------|---------------|-----|------|----------|----------|
+| **CVE-2026-115926** | free5GC BSF (≤ `1754bde`, v4.2.3) | Complete absence of authentication on all `/nbsf-management/v1` endpoints. An unauthenticated attacker can create, read, modify and delete PCF bindings, redirecting SMF policy traffic to a rogue PCF | CWE-306 | **9.1 Critical** | [GHSA-5wxg-mj2c-p9p2](https://github.com/free5gc/free5gc/security/advisories/GHSA-5wxg-mj2c-p9p2) | [Write-up](https://github.com/aymencdm/CVE-2026-115926-free5gc-bsf-missing-auth/) |
+| **CVE-2026-115925** | free5GC (v1.0.0 – v4.2.3+) | Root CA private key (`cert/root.key`) committed to the repository, allowing anyone to forge certificates trusted by the default NF PKI | CWE-321 | **8.7 High** | [GHSA-grjj-c27p-3mgc](https://github.com/free5gc/free5gc/security/advisories/GHSA-grjj-c27p-3mgc) | [Write-up](https://github.com/aymencdm/CVE-2026-115925-free5gc-root-ca-key-exposure) |
+| **CVE-2026-92424** | Content Egg WordPress plugin (< 11.9.0) | Contributor+ stored XSS via the import queue. Missing preset authorization plus impersonation of the preset author lets scripts bypass kses | CWE-79 | 6.8 Medium | [WPScan](https://wpscan.com/vulnerability/917b8042-b38c-4b6a-9237-1dd08ada157d/) | n/a |
 
 ## Other Research
 
@@ -67,6 +67,4 @@ I audit code and break things for a living (well, for bounties). My research foc
 
 - GitHub: [@aymencdm](https://github.com/aymencdm)
 - Bug bounty handles: `aymenbenlamari` / `aymencdm`
-- email : aymenbenlamari@gmail.com
-
-<!-- Add: email, LinkedIn, and a "Currently looking for" line (PhD / telecom AppSec roles) if you want it public. -->
+- Email: aymenbenlamari@gmail.com
