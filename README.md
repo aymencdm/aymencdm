@@ -1,5 +1,9 @@
 # Hi, I'm Aymen 👋
 
+![Security Research](https://img.shields.io/badge/Focus-BOLA%20%2F%20BFLA%20%7C%20APK%20%26%20API%20%7C%205G%20SBI-blue)
+![CVEs](https://img.shields.io/badge/Published%20CVEs-8-red)
+![Bug Bounty](https://img.shields.io/badge/Bug%20Bounty-HackerOne%20%7C%20Bugcrowd%20%7C%20Intigriti-green)
+
 **Security researcher & bug bounty hunter** · Telecom master's student · Algeria
 
 I find broken authorization in APIs, mobile apps and 5G cores.
@@ -8,10 +12,6 @@ I find broken authorization in APIs, mobile apps and 5G cores.
 - **Research:** BOLA / BFLA in APIs and SBI authorization in 5G core networks, mapped against 3GPP TS 33.501.
 - **Highlight:** a four-CVE Magma chain, from a normal NMS user to full control-plane takeover (**CVSS 3.1 9.9 Critical**), plus a **9.1 Critical** unauthenticated free5GC BSF.
 - **Currently:** working toward HTB CPTS.
-
-![Security Research](https://img.shields.io/badge/Focus-BOLA%20%2F%20BFLA%20%7C%20APK%20%26%20API%20%7C%205G%20SBI-blue)
-![CVEs](https://img.shields.io/badge/Published%20CVEs-8-red)
-![Bug Bounty](https://img.shields.io/badge/Bug%20Bounty-HackerOne%20%7C%20Bugcrowd%20%7C%20Intigriti-green)
 
 ---
 
