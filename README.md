@@ -1,12 +1,27 @@
 # Hi, I'm Aymen 👋
 
-**Security researcher & bug bounty hunter** · Telecom master's student · Algeria 
+**Security researcher & bug bounty hunter** · Telecom master's student · Algeria
 
-I audit code and break things for a living . My research focus is **5G core network security**: finding authentication and authorization failures in open-source 5G core implementations, and mapping them against 3GPP TS 33.501.
+I find broken authorization in APIs, mobile apps and 5G cores.
 
-![Security Research](https://img.shields.io/badge/Focus-5G%20Core%20Security-blue)
+- **Bug bounty:** BOLA / BFLA in Android APK and API pentesting on HackerOne, Bugcrowd and Intigriti.
+- **Research:** BOLA / BFLA in APIs and SBI authorization in 5G core networks, mapped against 3GPP TS 33.501.
+- **Highlight:** a four-CVE Magma chain, from a normal NMS user to full control-plane takeover (**CVSS 3.1 9.9 Critical**), plus a **9.1 Critical** unauthenticated free5GC BSF.
+- **Currently:** working toward HTB CPTS.
+
+![Security Research](https://img.shields.io/badge/Focus-BOLA%20%2F%20BFLA%20%7C%20APK%20%26%20API%20%7C%205G%20SBI-blue)
 ![CVEs](https://img.shields.io/badge/Published%20CVEs-8-red)
 ![Bug Bounty](https://img.shields.io/badge/Bug%20Bounty-HackerOne%20%7C%20Bugcrowd%20%7C%20Intigriti-green)
+
+---
+
+## Bug Bounty
+
+Focus: BOLA / BFLA in Android APK and API targets (static and dynamic APK analysis, traffic interception, API authorization testing).
+
+- **City of Vienna (Bugcrowd):** ranked **39th on the [Hall of Fame](https://bugcrowd.com/engagements/city-of-vienna-mbb-og/hall_of_fames) from a single P1**, a time-based blind SQL injection on a mobile API.
+- Accepted findings on HackerOne, Bugcrowd and Intigriti, including JWT and IDOR issues.
+- Handles: `aymenbenlamari` (HackerOne) / `aymencdm` (Bugcrowd, GitHub)
 
 ---
 
@@ -36,7 +51,7 @@ The per-CVE scores below are the individual ratings assigned by the CNA (VulDB).
 
 | CVE | Target | Vulnerability | CWE | CVSS | Advisory | Write-up |
 |-----|--------|---------------|-----|------|----------|----------|
-| **CVE-2026-109140** | Krill (fixed in 0.16.1) | Login-session tokens are encrypted with a nonce built from a counter that resets to 0 on every restart, so the same (key, nonce) pair is reused after each restart. Any user who can log in can forge an "admin" token | CWE-323 | **8.4 High** (3.1) | [NLnet Labs advisory](https://www.nlnetlabs.nl/downloads/krill/CVE-2026-109140.txt) / [GHSA-7mpx-94gm-vm7j](https://github.com/advisories/ghsa-7mpx-94gm-vm7j) | n/a |
+| **CVE-2026-109140** | Krill (fixed in 0.16.1) | Login-session tokens are encrypted with a nonce built from a counter that resets to 0 on every restart, so the same (key, nonce) pair is reused after each restart. Any user who can log in can forge an "admin" token | CWE-323 | **8.4 High** (3.1) | [NLnet Labs advisory](https://www.nlnetlabs.nl/downloads/krill/CVE-2026-109140.txt) / [GHSA-7mpx-94gm-vm7j](https://github.com/advisories/ghsa-7mpx-94gm-vm7j) | Coming soon |
 
 ### WordPress plugins
 
@@ -46,34 +61,24 @@ The per-CVE scores below are the individual ratings assigned by the CNA (VulDB).
 
 ## Other Research
 
-- **Final-year thesis (PFE)**: comparative, systematic audit of 5G core SBI authorization in Open5GS and free5GC against 3GPP TS 33.501.
-- **Magma chain research**: a four-CVE attack chain from a low-privilege NMS account to full Orc8r control-plane compromise, disclosed through VulDB after the project's GitHub advisory process stalled.
-- **Krill (RPKI CA)**: credited by NLnet Labs as a finder of the login-token nonce reuse (CVE-2026-109140), alongside Anthropic and Ada Logics.
-- **Bug bounty**: accepted findings on Bugcrowd, HackerOne and Intigriti programs, including a P1 SQL injection and JWT/IDOR issues.
-
-## Electronics Project
-
-**[medical_autonome](https://github.com/aymencdm/medical_autonome)** is my final-year electronics project: an autonomous hospital medicine-delivery robot.
-
-- **Arduino Uno** handles line following with 5 IR sensors and PID control through an L298N motor driver.
-- **Raspberry Pi 4** (Python) runs face tracking and face recognition on pan/tilt servos, and drives a servo-actuated medicine carousel and door.
-- **Flutter desktop app** manages patients, medicines and assignments, with a live camera feed and an emergency stop, talking to the Pi over a REST API and WebSocket.
-- The robot is coordinated by a finite state machine: follow line → stop at marker → recognize patient → dispense → resume. Arduino and Pi communicate over a serial protocol.
+- **Final-year thesis (PFE):** comparative, systematic audit of BOLA / BFLA and SBI authorization in Open5GS and free5GC against 3GPP TS 33.501.
+- **Magma chain research:** a four-CVE attack chain from a low-privilege NMS account to full Orc8r control-plane compromise, disclosed through VulDB after the project's GitHub advisory process stalled.
+- **Krill (RPKI CA):** credited by NLnet Labs as a finder of the login-token nonce reuse (CVE-2026-109140), alongside Anthropic and Ada Logics.
 
 ## Skills
 
 **Security**
-- Source code audit (whitebox)
-- Penetration testing (blackbox & whitebox)
+- BOLA / BFLA and broken access control in APIs
+- Android APK static and dynamic analysis, mobile traffic interception
 - 5G core / SBI security, 3GPP TS 33.501
+- Source code audit (whitebox), penetration testing (blackbox & whitebox)
 - Web & API testing (IDOR, broken auth, XSS, SQLi, SSRF)
 
 **Languages & Systems**
 - Python, C
 - Linux, Bash
 - Git
-- Raspberry Pi (Python, GPIO, camera/vision, servo control)
-- Arduino (C/C++, sensors, PID control, motor drivers, serial communication)
+- Embedded: Raspberry Pi, Arduino
 
 **Tooling**
 - Burp Suite, Caido for blackbox testing
@@ -83,6 +88,7 @@ The per-CVE scores below are the individual ratings assigned by the CNA (VulDB).
 **Background**
 - Electronics baccalaureate
 - Master's student in telecommunications
+- Studying for HTB CPTS
 
 ## Methodology
 
@@ -90,6 +96,10 @@ The per-CVE scores below are the individual ratings assigned by the CNA (VulDB).
 2. **Audit the code**: trace trust boundaries and compare how sibling components implement the same control (for example, auth middleware present in every NF except one).
 3. **Confirm black-box**: prove it with Burp/Caido/curl against the running lab.
 4. **Disclose responsibly**: private advisory first, CVE through the maintainers or a CNA, public write-up after.
+
+## Side Project
+
+**[medical_autonome](https://github.com/aymencdm/medical_autonome)**: my final-year electronics project, an autonomous hospital medicine-delivery robot (Arduino line following with PID, Raspberry Pi face recognition, Flutter control app).
 
 ## Contact
 
